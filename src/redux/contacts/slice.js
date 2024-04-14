@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchContacts, addContact, deleteContact } from "./contactsOps";
-
-
+import { fetchContacts, addContact, deleteContact } from "../contacts/operations";
 
 const handlePending = (state) => {
   state.isLoading = true;
@@ -44,15 +42,9 @@ const contactsSlice = createSlice({
         );
         state.items.splice(index, 1);
       })
-      .addCase(deleteContact.rejected, handleRejected)
-      
+      .addCase(deleteContact.rejected, handleRejected);
   },
 });
 
 
-
-
-// Експортуємо редюсер
 export const contactsReducer = contactsSlice.reducer;
-
-

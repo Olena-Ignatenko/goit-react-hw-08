@@ -4,7 +4,6 @@ export const initialStateFilter = {
   name: "",
 };
 
-
 const filtersSlice = createSlice({
   name: "filters",
   initialState: initialStateFilter,
