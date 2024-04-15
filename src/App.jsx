@@ -31,7 +31,7 @@ const App = () => {
     <Layout>
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<HomePage />}>
+          <Route path="/" element={<HomePage />} />
             <Route
               path="/register"
               element={
@@ -60,7 +60,7 @@ const App = () => {
               }
             />
             <Route path="*" element={<NotFoundPage />} />
-          </Route>
+          
         </Routes>
         
       </Suspense>

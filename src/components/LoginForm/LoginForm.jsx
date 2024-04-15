@@ -1,6 +1,6 @@
 import { ErrorMessage, Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import css from "./ContactForm.module.css";
+import css from "./LoginForm.module.css";
 
 
 const initialValues = {
@@ -19,13 +19,10 @@ const validationSchema = Yup.object({
 });
 
 const LoginForm = ({ onLogin }) => {
-  
   const handleSubmit = (data, actions) => {
     onLogin(data);
     actions.resetForm();
   };
-
-  
 
   return (
     <Formik
@@ -34,7 +31,7 @@ const LoginForm = ({ onLogin }) => {
       onSubmit={handleSubmit}
     >
       <Form className={css.form}>
-        <label className={css.label} htmlFor="email">
+        <label className={css.label} htmlFor="email" >
           Email:
         </label>
 
@@ -44,6 +41,7 @@ const LoginForm = ({ onLogin }) => {
             type="email"
             name="email"
             placeholder="Email"
+            autoComplete="username"
           />
           <ErrorMessage
             className={css.errorSpan}
@@ -52,12 +50,17 @@ const LoginForm = ({ onLogin }) => {
           />
         </div>
 
-        <label className={css.label} htmlFor="password">
+        <label className={css.label} htmlFor="password" >
           Password:
         </label>
 
         <div className={css.containerField}>
-          <Field className={css.input} type="password" name="password" />
+          <Field
+            className={css.input}
+            type="password"
+            name="password"
+            autoComplete="current-password"
+          />
           <ErrorMessage
             className={css.errorSpan}
             name="password"

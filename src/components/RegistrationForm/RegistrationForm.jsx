@@ -1,6 +1,6 @@
 import { ErrorMessage, Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import css from "./ContactForm.module.css";
+import css from "./RegistrationForm.module.css";
 import { useDispatch } from "react-redux";
 import { register } from "../../redux/auth/operations";
 
@@ -25,18 +25,10 @@ const validationSchema = Yup.object({
 });
 
 const RegistrationForm = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const handleSubmit = (data, actions) => {
-     dispatch(register(data));
+    dispatch(register(data));
     actions.resetForm();
-
-    // dispatch(
-    //   register({
-    //     name: form.elements.name.value,
-    //     email: form.elements.email.value,
-    //     password: form.elements.password.value,
-    //   })
-    // );
   };
 
   return (
@@ -45,61 +37,66 @@ const RegistrationForm = () => {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      
-        <Form className={css.form} onSubmit={handleSubmit}>
-          <label className={css.label} htmlFor="name">
-            Name:
-          </label>
+      <Form className={css.form}>
+        <label className={css.label} htmlFor="name" >
+          Name:
+        </label>
 
-          <div className={css.containerField}>
-            <Field
-              className={css.input}
-              type="text"
-              name="name"
-              placeholder="Alex Doe"
-            />
-            <ErrorMessage
-              className={css.errorSpan}
-              name="name"
-              component="span"
-            />
-          </div>
-          <label className={css.label} htmlFor="email">
-            Email:
-          </label>
+        <div className={css.containerField}>
+          <Field
+            className={css.input}
+            type="text"
+            name="name"
+            placeholder="Alex Doe"
+            autoComplete="current-password"
+          />
+          <ErrorMessage
+            className={css.errorSpan}
+            name="name"
+            component="span"
+          />
+        </div>
+        <label className={css.label} htmlFor="email" >
+          Email:
+        </label>
 
-          <div className={css.containerField}>
-            <Field
-              className={css.input}
-              type="text"
-              name="email"
-              placeholder="alex@patron.com"
-            />
-            <ErrorMessage
-              className={css.errorSpan}
-              name="email"
-              component="span"
-            />
-          </div>
+        <div className={css.containerField}>
+          <Field
+            className={css.input}
+            type="text"
+            name="email"
+            placeholder="alex@patron.com"
+            autoComplete="username"
+          />
+          <ErrorMessage
+            className={css.errorSpan}
+            name="email"
+            component="span"
+          />
+        </div>
 
-          <label className={css.label} htmlFor="password">
-            Password:
-          </label>
+        <label className={css.label} htmlFor="password" >
+          Password:
+        </label>
 
-          <div className={css.containerField}>
-            <Field className={css.input} type="password" name="password" />
-            <ErrorMessage
-              className={css.errorSpan}
-              name="password"
-              component="span"
-            />
-          </div>
+        <div className={css.containerField}>
+          <Field
+            className={css.input}
+            type="password"
+            name="password"
+            autoComplete="current-password"
+          />
+          <ErrorMessage
+            className={css.errorSpan}
+            name="password"
+            component="span"
+          />
+        </div>
 
-          <button type="submit" title="Click to register user">
-            Sing Up
-          </button>
-        </Form>
-      
+        <button type="submit" title="Click to register user">
+          Sing Up
+        </button>
+      </Form>
     </Formik>
   );
 };
