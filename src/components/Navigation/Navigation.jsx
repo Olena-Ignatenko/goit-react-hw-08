@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import css from "./Navigation.module.css"
 
 export const Navigation = () => {
-  const { isLoggedIn } = useSelector(selectIsLoggedIn);
+  const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
     <nav>
@@ -19,4 +19,6 @@ export const Navigation = () => {
     </nav>
   );
 };
+
+export default Navigation;
 

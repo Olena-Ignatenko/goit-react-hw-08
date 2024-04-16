@@ -26,8 +26,8 @@ const validationSchema = Yup.object({
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
-  const handleSubmit = (data, actions) => {
-    dispatch(register(data));
+  const handleSubmit = ({ name, email, password }, actions) => {
+    dispatch(register({ name, email, password }));
     actions.resetForm();
   };
 

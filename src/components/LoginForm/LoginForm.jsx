@@ -1,6 +1,8 @@
 import { ErrorMessage, Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import css from "./LoginForm.module.css";
+import { useDispatch } from "react-redux";
+import { logIn } from "../../redux/auth/operations";
 
 
 const initialValues = {
@@ -18,9 +20,11 @@ const validationSchema = Yup.object({
     .min(8, "Password must be at least 8 characters!"),
 });
 
-const LoginForm = ({ onLogin }) => {
-  const handleSubmit = (data, actions) => {
-    onLogin(data);
+const LoginForm = () => {
+  const dispatch = useDispatch();
+  
+  const handleSubmit = ({ email, password }, actions) => {
+    dispatch(logIn({ email, password }));
     actions.resetForm();
   };
 
