@@ -26,11 +26,12 @@ const validationSchema = Yup.object({
 
 const RegistrationForm = () => {
   const dispatch = useDispatch();
+  
   const handleSubmit = ({ name, email, password }, actions) => {
     dispatch(register({ name, email, password }));
     actions.resetForm();
   };
-
+ 
   return (
     <Formik
       initialValues={initialValues}

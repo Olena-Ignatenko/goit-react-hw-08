@@ -7,6 +7,7 @@ export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
+    <div className={css.navWrapper}>
     <nav>
       <NavLink className={css.link} to="/">
         Home
@@ -17,6 +18,8 @@ export const Navigation = () => {
         </NavLink>
       )}
     </nav>
+    </div>
+
   );
 };
 

@@ -9,3 +9,10 @@
 .link.active {
   color: #e84a5f;
 }
+
+.navWrapper {
+  /* display: flex; */
+    gap: 10px;
+    /* margin-right: 50px; */
+    /* padding-right: 80px; */
+}
