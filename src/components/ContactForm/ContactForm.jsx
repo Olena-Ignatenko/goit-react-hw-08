@@ -28,11 +28,7 @@ const ContactForm = () => {
     actions.resetForm();
   };
 
-    // Логіка обробки форми
-    // onSubmit(newContact);
-
-    // Очисщеня форми після успішного відправлення
-    // resetForm();
+    
   
 
   return (
@@ -71,7 +67,7 @@ const ContactForm = () => {
             type="text"
             id="number"
             name="number"
-            placeholder="xxx-xx-xx"
+            placeholder="xxx-xxx-xx-xx"
           />
           <ErrorMessage
             className={css.errorSpan}

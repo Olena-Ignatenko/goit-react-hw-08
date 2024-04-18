@@ -3,7 +3,7 @@ import Contact from "../Contact/Contact";
 import { selectFilteredContacts } from "../../redux/filters/selectors";
 
 const ContactList = () => {
-  // const contactsData = useSelector(selectContacts);
+  
   const filteredContacts = useSelector(selectFilteredContacts);
 
   return (
