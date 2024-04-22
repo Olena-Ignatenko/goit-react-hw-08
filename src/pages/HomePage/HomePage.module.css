@@ -1,0 +1,19 @@
+.homePageTitle {
+  margin-bottom: 5px;
+  font-weight: 800;
+  color: darkgreen;
+}
+
+.homePageText {
+  margin: 0 auto;
+  max-width: 500px;
+  margin-bottom: 10px;
+}
+
+.img {
+  margin: 0 auto 100px;
+   width: 400px;
+  height: 200px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}

@@ -24,7 +24,7 @@ const ContactsPage = () => {
           className: css.toastTextCenter,
         }}
       />
-      <h2>Phonebook</h2>
+      <h2 className={css.titleContactPage}>Phonebook</h2>
       <ContactForm />
       <SearchBox />
       <ContactList />
