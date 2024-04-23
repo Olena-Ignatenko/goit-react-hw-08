@@ -7,13 +7,13 @@ export const Navigation = () => {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
-    <div className={css.navWrapper}>
-    <nav>
-      <NavLink className={css.link} to="/">
+    <div >
+    <nav className={css.navLinkWrapper}>
+      <NavLink className={css.linkHome} to="/">
         Home
       </NavLink>
       {isLoggedIn && (
-        <NavLink className={css.link} to="/contacts">
+        <NavLink className={css.linkContacts} to="/contacts">
           Contacts
         </NavLink>
       )}

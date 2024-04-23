@@ -1,11 +1,20 @@
 .link {
   display: inline-block;
   text-decoration: none;
-  padding: 12px;
+  padding: 5px 10px;
   font-weight: 700;
-  color: #2a363b;
+  color: rgb(250, 253, 250);
+  border: none;
+  border-radius: 8px;
+  background-color: #93bdb5; ;
+  gap: 5px;
 }
 
 .link.active {
   color: #e84a5f;
+}
+
+.navLinkWrapper{
+  display: flex;
+  gap: 5px;
 }

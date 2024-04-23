@@ -1,4 +1,5 @@
 import css from "./HomePage.module.css"
+import phoneBookIcon  from "../../assets/phoneBook.png"
 
 const HomePage = () => {
   return (
@@ -14,11 +15,11 @@ const HomePage = () => {
           Get started with it today!
         </p>
       </div>
-      <div className={css.img}>
-        <img src="/src/assets/phone-book-icon.png"></img>
+      <div className={css.imgWrapper}>
+        <img className={css.zoomInOut} src={phoneBookIcon} alt="Phone Book Icon" />
       </div>
       <div>
-        <p>Created with ❤️ by Olena Ignatenko</p>
+        <footer className={css.footer}>Created with ❤️ by Olena Ignatenko</footer>
       </div>
     </>
   );

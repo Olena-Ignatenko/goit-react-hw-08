@@ -10,6 +10,11 @@
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
+  min-width: 320px;
+  width: 450px;
+  margin: 0 auto;
+    color: rgb(250, 253, 250);
+  
 }
 
 .containerField {

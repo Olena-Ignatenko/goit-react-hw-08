@@ -1,18 +1,30 @@
-.link {
+.linkHome {
   display: inline-block;
   text-decoration: none;
-  padding: 12px;
+  padding: 5px 10px;
   font-weight: 700;
-  color: #2a363b;
+  color: rgb(246, 249, 246);
+  border: none;
+  border-radius: 8px;
+  background-color: #93bdb5;
+  
+}
+.linkContacts{
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: 700;
+  color: rgb(246, 249, 246);
+  border: none;
+  border-radius: 8px;
+  background-color: #93bdb5;
 }
 
 .link.active {
   color: #e84a5f;
 }
 
-.navWrapper {
-  /* display: flex; */
+.navLinkWrapper {
+  display: flex;
     gap: 10px;
-    /* margin-right: 50px; */
-    /* padding-right: 80px; */
 }
